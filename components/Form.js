@@ -10,7 +10,7 @@ const Form = (props) => {
         let city = e.target.city.value;  // i removed elements, it was e.target.elements.city.value;
         let country =  e.target.elements.country.value;
         console.log(city, country)
-        let apiKey = 'c8161c0f8e4966216aab02100fd2831c'
+        let apiKey = 'get you own'
         const response = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${apiKey}`)
         const data = await response.json();
         props.changeState(data);
